@@ -21,9 +21,8 @@
 title: Hi, I'm Michael
 email: michael@kuenneke.cloud
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I'm a software developer & consultant living in Germany. I passionate about
+  .NET, DevOps and Smart Home. This is my blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.kuenneke.cloud" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -59,3 +58,24 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  - scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
+      author: mkuennek
+      commenting: open
+  - scope:
+      path: '_posts'
+      type: posts
+    values:
+      layout: post
+      author: mkuennek
+      commenting: open
+
+emptyArray: []
+
+comments:
+  receiver: https://jekyllcomments.azurewebsites.net/api/PostComment
