@@ -1,5 +1,5 @@
 <h3>Respond to this</h3>
-<form action="/fake" method="post" id="commentform" class="form-horizontal">
+<form action="/fake" method="post" id="commentform" class="form-vertical">
   <fieldset id="commentfields">
     <input name="redirect" type="hidden" value="{{ site.url }}/thanks">
     <input name="post_id" type="hidden" value="{{ slug }}">
@@ -31,7 +31,7 @@
       }
 
       var button = document.getElementById('commentbutton')
-      if (button.innerText != 'Confirm comment') {
+      if (button.innerText.toLocaleUpperCase() != 'CONFIRM COMMENT') {
         button.innerText = 'Confirm comment'
         return
       }
