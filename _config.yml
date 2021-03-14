@@ -61,19 +61,12 @@ plugins:
 
 defaults:
   - scope:
-      path: ''
-      type: pages
-    values:
-      layout: page
-      author: mkuennek
-      commenting: open
-  - scope:
       path: '_posts'
       type: posts
     values:
-      layout: post
-      author: mkuennek
-      commenting: open
+      comments: true
+
+permalink: /:title:output_ext
 
 emptyArray: []
 
